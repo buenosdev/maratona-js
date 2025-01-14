@@ -1,0 +1,39 @@
+<!-- 6. Inverter uma Palavra
+Descrição:
+Peça ao usuário uma palavra e exiba-a invertida.
+Tarefas:
+Crie uma função que receba uma string.
+Converta a string para um array com o método split.
+Inverta a ordem com o método reverse e transforme novamente em string com join. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0002 sarvalaP ed rosrevnI</title>
+</head>
+<body>
+    <h1>Inversor de Palavras 2000</h1>
+    <label for="text">Digite uma palavra:</label>
+    <input type="text" id="text"><br><br>
+
+    <div id="ivertedor"></div>
+
+    <button onclick="exibir()">Inverter Palavra</button>
+
+    <script>
+        function exibir() {
+
+            const text = document.getElementById("text").value;{
+
+                const inversa = text.split('').reverse().join('');
+
+                const ivertedor = document.getElementById("ivertedor");
+                ivertedor.innerText = `Palavra invertida: ${inversa}`;
+            } 
+        }
+    </script>
+</body>
+</html>
+
