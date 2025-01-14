@@ -1,0 +1,41 @@
+7. Soma de Elementos de um Array
+Descrição:
+Calcule a soma dos elementos de um array.
+Tarefas:
+Crie um array como [1, 2, 3, 4, 5].
+Use um loop ou o método reduce para somar os valores.
+Exiba o resultado no console.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Soma dos Elementos de um Array</h1>
+
+    <div id="soma">
+    </div>
+
+    <button onclick="exibir()">Calcular Soma</button>
+
+    <script>
+        let lista = [1, 2, 3, 4, 5];
+
+        function exibir() {
+            let soma = 0;
+
+            for (let i = 0; i < lista.length; i++) {
+                soma += lista[i]; 
+            }
+
+         
+            const div = document.createElement("div");
+            div.innerText = `A soma dos elementos é: ${soma}`;
+            document.querySelector("#soma").appendChild(div);
+        }
+    </script>
+</body>
+</html>
