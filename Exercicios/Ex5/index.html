@@ -1,0 +1,80 @@
+5. Encontrar o Maior Número em uma Lista
+Descrição:
+Dado um array de números, encontre o maior valor.
+Tarefas:
+Crie um array como [3, 7, 2, 9, 5].
+Use um loop para comparar os números e encontrar o maior.
+Exiba o maior número no console.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var list = [3, 7, 2, 9, 5];
+
+        var maior = Math.max(...list);
+
+        console.log(maior);  
+
+    </script>
+
+</body>
+</html>
+
+<!-- Professor pediu pra fazer diferente, então... -->
+
+Os valores devem ser comparados entre si.
+
+Ao serem comparados, deve ser tirado um valor máximo entre os valores da lista
+
+E após tirar esse valor, exibir com console.log
+
+
+Devo saber:
+
+- como caralhos vou comparar esses valores entre si (for?)
+- como vou tirar o valor máximo entre eles? (provavelmente usando if)
+
+
+Solução:
+
+Usar o for: Usar para comparar na lista de números e, em cada iteração, comparar o número atual com o maior número encontrado até o momento
+Comparar os valores: Usar uma variável para armazenar o maior número encontrado e, dentro do loop, vamos verificar se o número atual é maior que o número armazenado
+Tirar o valor máximo: Se encontrar esse valor, ele atualiza a variável com esse novo valor máximo
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var list = [3, 7, 2, 9, 5];
+        
+        var maior = list[0];
+
+        for (var i = 1; i < list.length; i++) {
+            
+            if (list[i] > maior) {
+                maior = list[i]; 
+            }
+        }
+
+       
+        console.log(maior);  
+    </script>
+
+</body>
+</html>
+
+
+<!-- Esse length eu aprendi agora. Ele que faz a mágica do rolê acontecer -->
