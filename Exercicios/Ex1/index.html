@@ -1,0 +1,41 @@
+/*1. Soma de Dois Números
+Descrição:
+Peça ao usuário dois números e exiba a soma deles.
+Tarefas:
+Crie uma função soma que receba dois números como parâmetros.
+Exiba o resultado no console ou em um alert.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de Dois Números</title>
+</head>
+<body>
+    <h1>Calculadora de Soma</h1>
+    <label for="num1">Digite o primeiro número:</label>
+    <input type="number" id="num1"><br><br>
+    
+    <label for="num2">Digite o segundo número:</label>
+    <input type="number" id="num2"><br><br>
+    
+    <button onclick="calcularSoma()">Somar</button>
+
+    <script>
+        function calcularSoma() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Por favor, insira números válidos.");
+            } else {
+                const soma = num1 + num2;
+                alert("A soma dos números é: " + soma);
+                console.log("A soma dos números é:", soma);
+            }
+        }
+    </script>
+</body>
+</html>
